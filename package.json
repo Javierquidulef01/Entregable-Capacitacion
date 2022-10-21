@@ -1,0 +1,17 @@
+{
+  "name": "entregable-capacitacion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cursoEspecial": "node ./javascript/CursoEspecial.js",
+    "capacitacion": "node ./javascript/Capacitacion.js",
+    "instructor": "node ./javascript/Instructor.js",
+    "curso": "node ./javascript/Curso.js",
+    "index": "node ./javascript/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
