@@ -33,7 +33,8 @@ export class Curso {
 
     public setNotaMinimaCurso(nota: number): void {
         try {
-            if (nota <0) {
+            if (nota < 0) {
+                this.minimoNotaCurso = 1;
                 throw new ErrorNota();
             } 
             this.minimoNotaCurso = nota;

@@ -16,6 +16,7 @@ export class CursoEspecial extends Curso {
     public setNotaMinimaTrabajo(nota: number): void {
         try {
             if (nota < 0) {
+                this.notaMinimaTrabajo = 1;
                 throw new ErrorNota();
             } 
             this.notaMinimaTrabajo = nota;
