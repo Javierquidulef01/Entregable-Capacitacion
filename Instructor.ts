@@ -7,7 +7,6 @@ export class Instructor {
     private cupoModalidadVirtual: number;
     private capacitaciones: Capacitacion[];
 
-
     constructor(pDNI: number, pNombre: string, pApellido: string, pCupoModVirt: number) {
         this.dni = pDNI;
         this.nombre = pNombre;
@@ -15,10 +14,11 @@ export class Instructor {
         this.cupoModalidadVirtual = pCupoModVirt;
         this.capacitaciones = [];
     };
+
     public inscribirACurso(capacitacion: Capacitacion): boolean {
         let flag: boolean = true;
         for (let i: number = 0; i < this.capacitaciones.length; i++) {
-            if (this.capacitaciones[i] === capacitacion) {
+            if (this.capacitaciones[i].getCurso().getModalidad() === capacitacion.getCurso().getModalidad()) {
                 flag = false;
             }
         }
@@ -30,10 +30,12 @@ export class Instructor {
             return false;
         }
     }
-    public getNombre():string{
+
+    public getNombre(): string {
         return this.nombre;
     }
-    public getApellido():string{
+
+    public getApellido(): string {
         return this.apellido;
     }
 }  

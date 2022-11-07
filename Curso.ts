@@ -8,23 +8,11 @@ export class Curso {
     public constructor(nombre: string, modalidad: string, minimoNotaCurso: number) {
         this.nombre = nombre;
         this.modalidad = modalidad;
-        this.setNotaMinimaCurso (minimoNotaCurso);
-    }
-
-    public getNombre(): string {
-        return this.nombre;
-    }
-
-    public setNombre(nombre: string): void {
-        this.nombre = nombre;
+        this.minimoNotaCurso = minimoNotaCurso;
     }
 
     public getModalidad(): string {
         return this.modalidad;
-    }
-
-    public setModalidad(modalidad: string): void {
-        this.modalidad = modalidad;
     }
 
     public getNotaMinimaCurso(): number {
@@ -36,14 +24,12 @@ export class Curso {
             if (nota < 0) {
                 this.minimoNotaCurso = 1;
                 throw new ErrorNota();
-            } 
+            }
             this.minimoNotaCurso = nota;
         } catch (error) {
             console.log(error);
         }
-    
     }
-
 }
 
 /*

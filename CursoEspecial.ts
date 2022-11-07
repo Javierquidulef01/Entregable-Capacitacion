@@ -18,13 +18,12 @@ export class CursoEspecial extends Curso {
             if (nota < 0) {
                 this.notaMinimaTrabajo = 1;
                 throw new ErrorNota();
-            } 
+            }
             this.notaMinimaTrabajo = nota;
         } catch (error) {
             console.log(error);
-        } 
+        }
     }
-
 }
 /*
 let c = new CursoEspecial("programacion Web", "virtual", -3, -3);
